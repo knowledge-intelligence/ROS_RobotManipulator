@@ -39,7 +39,9 @@ echo "[rosdep init and python-rosinstall]"
 sudo sh -c "rosdep init"
 rosdep update
 . /opt/ros/$name_ros_distro/setup.sh
-sudo apt-get install -y python-rosinstall
+sudo apt-get install -y python3-rosinstall
+#sudo apt install python3-roslaunch
+source /opt/ros/noetic/setup.bash
 
 echo "[Making the catkin workspace and testing the catkin_make]"
 mkdir -p ~/$name_catkinws/src
